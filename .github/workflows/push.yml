@@ -1,8 +1,0 @@
-on: push
-name: Validate
-jobs:
-  fixup:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - uses: ianwremmel/prevent-fixup-commits@v1.0.1

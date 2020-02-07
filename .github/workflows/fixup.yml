@@ -1,12 +1,9 @@
-name: Git Checks - Fixup
-
+name: Commit Checks
 on: [push]
-
 jobs:
-  block-fixup:
-    runs-on: ubuntu-18.04
-
+  prevent-fixup-merge:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.0.0
-    - name: Block Fixup Commit Merge
+    - name: Prevent merging in fixup commits
       uses: 13rac1/block-fixup-merge-action@v1.1.1
